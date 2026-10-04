@@ -1,0 +1,60 @@
+---
+title: "On building slowly"
+date: "2026-09-14"
+summary: "Why the projects I'm proudest of took three times longer than planned, and why I stopped treating that as a failure."
+tags: ["craft", "process"]
+---
+
+Every project I've finished has a moment, somewhere around the 60% mark, where the plan stops matching reality. The schema is wrong. The UI I sketched doesn't survive contact with real data. A dependency I trusted turns out to do half of what its README promised.
+
+For a long time I read that moment as evidence I had planned badly. Now I think it's just what building looks like.
+
+## The 60% wall
+
+Here's the pattern, roughly:
+
+1. The first third goes fast. Everything is greenfield and every decision is reversible.
+2. The middle third is where decisions start to collide. You discover that two things you assumed were independent are not.
+3. The last third is slow because it is *real*. Edge cases, empty states, errors you can't reproduce.
+
+> The work you can see is never the work that took the time.
+
+## What changed
+
+I stopped estimating in days and started estimating in **iterations**. A project is "one iteration" if I expect to throw away the first version. Most things worth doing are two.
+
+The second thing I changed is how I write things down. A short `NOTES.md` at the root of every repo, written for future me, with three sections:
+
+```md title="NOTES.md"
+## What this is
+One paragraph. What problem, for whom.
+
+## Decisions
+- 2026-09-02: Postgres over SQLite because of concurrent writers.
+- 2026-09-05: Dropped the realtime feature. Polling every 30s is fine.
+
+## Open questions
+- Does categorization need to be explainable? (Leaning yes.)
+```
+
+That file is cheap to maintain and it has saved me from re-litigating the same decision three weekends in a row.
+
+## A small example
+
+Here is the kind of code that only exists because of the last third. Nobody plans to write it, and it's the difference between a demo and a tool:
+
+```ts {4-7}
+export function parseAmount(raw: string): number | null {
+  const cleaned = raw.replace(/[,$\s]/g, "");
+  if (cleaned === "") return null;
+  // Some banks export negatives as "(12.50)" instead of "-12.50".
+  const parenthesized = /^\((.+)\)$/.exec(cleaned);
+  const normalized = parenthesized ? `-${parenthesized[1]}` : cleaned;
+  const value = Number(normalized);
+  return Number.isFinite(value) ? value : null;
+}
+```
+
+## Where this leaves me
+
+Slow isn't the goal. *Finished* is the goal, and finished things are built by people who expected the wall and kept going anyway.

@@ -1,0 +1,49 @@
+---
+title: "Notes on type systems, for people who ship"
+date: "2026-06-02"
+summary: "A working programmer's field guide to what types actually buy you, with a table I keep coming back to."
+tags: ["typescript", "programming languages"]
+---
+
+I don't think about type theory much. I think about *what breaks at 2am*. This is a short list of the things types have reliably caught for me, and a few they never will.
+
+## What types catch
+
+| Failure | Caught by types? | Notes |
+| --- | --- | --- |
+| Misspelled field name | Yes | The boring win, and the biggest one. |
+| Null where a value was expected | Mostly | Only if `strictNullChecks` is on. Turn it on. |
+| Wrong units (ms vs s) | No, by default | Branded types help: `type Ms = number & { __ms: true }`. |
+| Forgetting a `switch` case | Yes | With `never` exhaustiveness checks. |
+| Business logic being wrong | No | Nothing catches this except tests and users. |
+
+## The one trick I actually use
+
+Make illegal states unrepresentable. Instead of this:
+
+```ts
+type Request = {
+  status: "idle" | "loading" | "success" | "error";
+  data?: User;
+  error?: string;
+};
+```
+
+write this:
+
+```ts
+type Request =
+  | { status: "idle" }
+  | { status: "loading" }
+  | { status: "success"; data: User }
+  | { status: "error"; error: string };
+```
+
+Now `data` can't exist alongside `status: "error"`, and every `switch` over `status` narrows for free.
+
+## What I still get wrong
+
+- I over-generalize too early. A generic that has one caller is a comment with extra steps.
+- I reach for `as` when I'm tired. Every `as` is a promise I'm making to the compiler on behalf of runtime data I haven't checked.
+
+Types are a conversation with a very literal colleague. Be specific, and they'll hold you to it.
