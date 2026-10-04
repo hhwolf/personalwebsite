@@ -61,3 +61,13 @@ Known limitations / follow-ups:
 - Project tiles are numbered placeholders until screenshots are added.
 - All copy is placeholder; see README for where to edit.
 - `site.url` defaults to a Vercel placeholder until the domain exists (`NEXT_PUBLIC_SITE_URL`).
+
+## 2026-10-04 — Signature intro, custom cursor, left rail
+
+Henry asked for three jcedrik details that the first pass left out.
+- **Signature intro**: preloader now writes the name in a script font (Great Vibes via `next/font`) behind a soft gradient mask swept by GSAP (`--reveal` CSS var), then tints ember and lifts. The hero gets a small script monogram at top center.
+- **Custom cursor** (`Cursor.tsx`): ember dot + lagging ring on `(hover: hover) and (pointer: fine)` with motion allowed; ring grows over links/buttons and becomes a "DRAG" badge over the skills stage (`data-cursor="drag"`). Native cursor hidden via `html.has-cursor`.
+- **Left rail** (`LeftRail.tsx`, lg+): 3px edge progress bar scrubbed by ScrollTrigger, vertical outlined "PORTFOLIO", year, and name.
+- Bug found: in dev, React Strict Mode runs effects twice; the preloader set its "seen" flag at start, so the second run skipped the intro. That is why the intro never showed on localhost. Flag now set in `onComplete`. Production was unaffected.
+- Bug found: cursor cleanup read refs that React had already nulled; nodes are now captured when the effect starts.
+- Added `suppressHydrationWarning` on `<html>` because the inline `js` class script and Lenis/cursor classes legitimately differ from the server markup (dev-only warning).

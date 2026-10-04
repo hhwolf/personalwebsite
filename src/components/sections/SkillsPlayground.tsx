@@ -214,7 +214,7 @@ function PhysicsStage({ visible }: { visible: Skill[] }) {
           last = now;
           return;
         }
-        const dt = Math.min(now - last, 33);
+        const dt = Math.min(now - last, 16.667);
         last = now;
         Engine.update(engine, dt);
         sync();
@@ -295,6 +295,7 @@ function PhysicsStage({ visible }: { visible: Skill[] }) {
       className="relative cursor-grab overflow-hidden rounded-2xl border border-line bg-[radial-gradient(80%_60%_at_50%_100%,rgb(242_163_58/0.08),transparent_70%)]"
       style={{ height: STAGE_HEIGHT }}
       aria-label="Interactive skills playground"
+      data-cursor="drag"
     >
       <div
         aria-hidden

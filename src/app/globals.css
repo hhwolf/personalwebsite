@@ -26,6 +26,7 @@
 
 @theme inline {
   --font-display: var(--font-instrument), Georgia, "Times New Roman", serif;
+  --font-signature: var(--font-signature), "Brush Script MT", cursive;
   --font-sans: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", monospace;
 }
@@ -286,4 +287,68 @@ html.lenis body {
   overflow: hidden;
   padding-bottom: 0.08em;
   margin-bottom: -0.08em;
+}
+
+/* Signature "pen" reveal: a soft-edged mask swept left to right by GSAP (--reveal). */
+.signature-reveal {
+  --reveal: 0%;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    #000 calc(var(--reveal) - 8%),
+    transparent var(--reveal)
+  );
+  mask-image: linear-gradient(90deg, #000 calc(var(--reveal) - 8%), transparent var(--reveal));
+}
+
+/* Custom cursor: hide the native one only when the custom cursor is active. */
+html.has-cursor,
+html.has-cursor * {
+  cursor: none !important;
+}
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 95;
+  border-radius: 9999px;
+  will-change: transform;
+}
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  background: var(--color-ember);
+}
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  margin: -18px 0 0 -18px;
+  border: 1px solid color-mix(in srgb, var(--color-ember) 70%, transparent);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  transition:
+    background-color 300ms,
+    border-color 300ms;
+}
+.cursor-ring[data-state="hover"] {
+  background: color-mix(in srgb, var(--color-ember) 14%, transparent);
+}
+.cursor-ring[data-state="drag"],
+.cursor-ring[data-state="label"] {
+  background: var(--color-ember);
+  border-color: var(--color-ember);
+}
+
+/* Vertical rail text */
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
 }

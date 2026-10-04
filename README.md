@@ -65,3 +65,5 @@ Push to GitHub and import the repo in Vercel; defaults work. When you connect a 
 "Obsidian & Ember": near-black `#0a0a0b`, warm off-white `#f2efe9`, one amber accent `#f2a33a`. Instrument Serif for display, Geist for body, Geist Mono for labels. Tokens live in `src/app/globals.css` under `@theme`.
 
 Motion rules: scroll-linked or multi-step timelines use GSAP; React state transitions use Motion. Everything respects `prefers-reduced-motion`, and the page is fully readable with JavaScript disabled.
+
+Signature details: the intro "signs" your name in Great Vibes (`--font-signature`), a custom dot-and-ring cursor replaces the native one on fine pointers (add `data-cursor="Label"` to any element to show a word in the ring), and a left rail shows scroll progress with vertical labels on large screens.

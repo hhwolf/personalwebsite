@@ -7,6 +7,10 @@ import { gsap, prefersReducedMotion, SplitText, useGSAP } from "@/lib/gsap";
 export function Hero() {
   const root = useRef<HTMLElement>(null);
   const year = new Date().getFullYear();
+  const initials = site.name
+    .split(" ")
+    .map((w) => w[0])
+    .join("");
 
   useGSAP(
     () => {
@@ -61,13 +65,20 @@ export function Hero() {
     <section
       ref={root}
       id="top"
-      className="relative flex min-h-svh flex-col justify-between overflow-hidden px-6 pt-28 pb-10 md:px-10 md:pt-36"
+      className="relative flex min-h-svh flex-col justify-between overflow-hidden px-6 pt-28 pb-10 md:px-10 md:pt-36 lg:px-20"
       aria-label="Introduction"
     >
       <div className="flex items-start justify-between">
         <p className="label" data-hero>
           {site.location}
           <span className="mt-1 block text-ember">{site.availability}</span>
+        </p>
+        <p
+          className="font-signature absolute top-6 left-1/2 hidden -translate-x-1/2 text-4xl text-ash-400 md:block"
+          aria-hidden
+          data-hero
+        >
+          {initials}
         </p>
         <p className="label hidden text-right md:block" data-hero>
           Portfolio

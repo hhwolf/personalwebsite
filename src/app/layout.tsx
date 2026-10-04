@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { Geist, Geist_Mono, Great_Vibes, Instrument_Serif } from "next/font/google";
 import type { ReactNode } from "react";
 import { Footer } from "@/components/layout/Footer";
 import { Grain } from "@/components/layout/Grain";
+import { LeftRail } from "@/components/layout/LeftRail";
 import { Menu } from "@/components/layout/Menu";
 import { ProgressRail } from "@/components/layout/ProgressRail";
 import { Providers } from "@/components/providers/Providers";
@@ -14,6 +15,13 @@ const instrument = Instrument_Serif({
   style: ["normal", "italic"],
   subsets: ["latin"],
   variable: "--font-instrument",
+  display: "swap",
+});
+
+const signature = Great_Vibes({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-signature",
   display: "swap",
 });
 
@@ -60,7 +68,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
-      className={`${instrument.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      // An inline script adds `js` (and Lenis/cursor add classes) before React hydrates.
+      suppressHydrationWarning
+      className={`${instrument.variable} ${signature.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
         {/* Marks JS as running before first paint so the reveal gate in globals.css applies. */}
@@ -78,6 +88,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Grain />
         <Providers>
           <Menu />
+          <LeftRail />
           <ProgressRail />
           <main id="main" className="flex-1">
             {children}
