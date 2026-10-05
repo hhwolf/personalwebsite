@@ -84,3 +84,9 @@ Henry asked for three jcedrik details that the first pass left out.
 - The two sample essays are now `draft: true` so no placeholder writing appears under Henry's name; the section shows an empty-state line until a real essay lands.
 - `public/resume.pdf` replaced with the real résumé.
 - Assumptions to confirm with Henry: class year "Brown '30", "Open to opportunities" status, and that hosting the résumé (which includes a phone number) publicly is intended.
+
+## 2026-10-05 — Project screenshots and résumé redaction
+
+- All five Vercel deployments return 402 "Deployment Paused", so live captures were impossible. Cloned each repo to `/tmp/shots`, installed, ran the dev servers on :5101–:5107, and captured at 1600×1000 with Playwright (The Snap League needed `--use-angle=swiftshader` for WebGL). Where the repo ships better author screenshots (FitCheck `docs/demo/01-variant.png`, Mini Desktop `docs/hero.png`) those were used, downscaled to 1600 wide. Kindred's three phone screenshots from `docs/` were composed into one landscape image.
+- Seven projects now have images; FF Dash (needs ESPN credentials), fpl-predict (CLI), and the Kalshi analysis (no figures in repo) keep the numbered placeholder tile.
+- Résumé: the phone number and its separator were removed from the PDF content stream with pypdf (glyph-level edit, verified by text extraction), then streams recompressed. The original stays only in `.context/attachments/` (gitignored).

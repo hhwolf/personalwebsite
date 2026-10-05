@@ -1,4 +1,11 @@
 import type { StaticImageData } from "next/image";
+import declutteredShot from "@/assets/projects/decluttered.png";
+import fitcheckShot from "@/assets/projects/fitcheck.png";
+import greensiteShot from "@/assets/projects/greensite.png";
+import kindredShot from "@/assets/projects/kindred.png";
+import miniDesktopShot from "@/assets/projects/mini-desktop.png";
+import snapLeagueShot from "@/assets/projects/snap-league.png";
+import threadlineShot from "@/assets/projects/threadline.png";
 
 export type Project = {
   title: string;
@@ -25,6 +32,7 @@ export const projects: Project[] = [
   {
     title: "FitCheck",
     slug: "fitcheck",
+    image: fitcheckShot,
     category: "Hackathon winner · Full-stack",
     description:
       "Winner of Columbia DivHacks 2026 (Live Better track). Scan a small NYC room once, text furniture ideas over iMessage, and rearrange your real room like a top-down game before you buy or haul anything up three flights of stairs.",
@@ -39,6 +47,7 @@ export const projects: Project[] = [
   {
     title: "Threadline",
     slug: "threadline",
+    image: threadlineShot,
     category: "Developer tools · AI agents",
     description:
       "A chat-first workspace for building software with coding agents. An orchestrator model deploys isolated agent runs, verifies their output, and integrates accepted code, while the conversation itself is a tree: open decisions fork into labeled directions you can revisit.",
@@ -53,6 +62,7 @@ export const projects: Project[] = [
   {
     title: "Mini Desktop",
     slug: "mini-desktop",
+    image: miniDesktopShot,
     category: "Systems in the browser",
     description:
       "A local-first desktop that lives entirely in your browser: draggable windows, a virtual filesystem, and eleven working apps that share live file state, with no backend or accounts. Reload or open a second tab and everything is still there.",
@@ -93,6 +103,7 @@ export const projects: Project[] = [
   {
     title: "The Snap League",
     slug: "snap-league",
+    image: snapLeagueShot,
     category: "Game · Three.js",
     description:
       "A compact browser arena shooter with articulated toy-like rivals, six multi-floor campaign arenas, generated audio, radar, and a complete three-minute match loop, ending in a multi-phase boss fight.",
@@ -107,6 +118,7 @@ export const projects: Project[] = [
   {
     title: "Kindred",
     slug: "kindred",
+    image: kindredShot,
     category: "Social · Recommendation",
     description:
       "A swipe app for genuine platonic connection: one deck of people worth saying hi to, one deck of activities worth inviting them to. Every match ships with an icebreaker built from real shared ground and a 'plan something' button.",
@@ -121,6 +133,7 @@ export const projects: Project[] = [
   {
     title: "Decluttered",
     slug: "decluttered",
+    image: declutteredShot,
     category: "Recommendation engine",
     description:
       "One taste engine, five cravings: books, movies, TV, music, and restaurants. Swipe a ranked deck, rate what you consume down to individual craft elements, and browse a For You page built by seven labeled suggestion mechanisms.",
@@ -132,6 +145,7 @@ export const projects: Project[] = [
   {
     title: "GreenSite",
     slug: "greensite",
+    image: greensiteShot,
     category: "Climate · PWA",
     description:
       "A sustainability hub for real-estate developers: a portfolio dashboard, a US requirements tracker that matches federal, state, and local rules to each project's location, a LEED v4 scorecard, and an interactive embodied-carbon visualizer.",
