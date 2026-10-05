@@ -106,7 +106,7 @@ export function Hero() {
           </span>
         </p>
         <p className="label hidden md:block" data-hero>
-          Projects · Essays · Notes
+          Projects · Papers · Essays
         </p>
       </div>
     </section>

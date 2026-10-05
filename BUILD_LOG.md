@@ -71,3 +71,16 @@ Henry asked for three jcedrik details that the first pass left out.
 - Bug found: in dev, React Strict Mode runs effects twice; the preloader set its "seen" flag at start, so the second run skipped the intro. That is why the intro never showed on localhost. Flag now set in `onComplete`. Production was unaffected.
 - Bug found: cursor cleanup read refs that React had already nulled; nodes are now captured when the effect starts.
 - Added `suppressHydrationWarning` on `<html>` because the inline `js` class script and Lenis/cursor classes legitimately differ from the server markup (dev-only warning).
+
+## 2026-10-04 — Real content from résumé and GitHub
+
+- Source: Henry's résumé PDF (Sept 2026) and the public repos on github.com/hhwolf with their READMEs. LinkedIn is behind a login wall and was not used.
+- `site.ts`: name, tagline, Brown email, Providence location, GitHub + LinkedIn. Nav label "Essays" → "Writing".
+- `projects.ts`: 10 projects (FitCheck/DivHacks winner, Threadline, Mini Desktop, FF Dash, fpl-predict, The Snap League, Kindred, Decluttered, GreenSite, Kalshi NBA pricing) with GitHub links and Vercel deployments where they exist. Descriptions and "challenge" lines are drawn from each README only.
+- `journey.ts`: 9 entries from the résumé (Brown, Asteria Labs, Northeastern, MIT Energy Initiative, Cambridge, Tencent Spark Camp, Canadian Solar, Andover, OpenAir).
+- `skills.ts`: categories now Languages / Web / Data & ML / Tools, populated from the résumé and repo languages.
+- New `publications.ts` + `PublicationList` rendered in the Writing section and on `/essays`; the arXiv preprint links out.
+- About section rewritten with a real bio and facts (studying, focus, chess rating).
+- The two sample essays are now `draft: true` so no placeholder writing appears under Henry's name; the section shows an empty-state line until a real essay lands.
+- `public/resume.pdf` replaced with the real résumé.
+- Assumptions to confirm with Henry: class year "Brown '30", "Open to opportunities" status, and that hosting the résumé (which includes a phone number) publicly is intended.

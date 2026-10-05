@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { EssayCard } from "@/components/ui/EssayCard";
+import { PublicationList } from "@/components/ui/PublicationList";
 import { getAllEssays } from "@/lib/essays";
 
 export const metadata: Metadata = {
-  title: "Essays",
-  description: "Essays and written work.",
+  title: "Papers & essays",
+  description: "Publications, presentations, and essays by Henry He.",
   alternates: { canonical: "/essays" },
 };
 
@@ -17,21 +18,29 @@ export default async function EssaysPage() {
         <span aria-hidden>←</span> Home
       </Link>
       <h1 className="display text-display-lg mt-8">
-        Essays <em>&amp; notes</em>
+        Papers <em>&amp; essays</em>
       </h1>
       <p className="mt-6 max-w-xl text-ash-200">
-        Longer-form thinking: things I built, things I read, and what I changed my mind about.
+        Research I have co-authored, and longer-form thinking about what I build and read.
       </p>
-      <p className="label mt-16">
+      <p className="label mt-16">Publications &amp; presentations</p>
+      <div className="mt-4">
+        <PublicationList />
+      </div>
+      <p className="label mt-20">
         {essays.length} {essays.length === 1 ? "essay" : "essays"}
       </p>
-      <ul className="mt-4 divide-y divide-line border-y border-line">
-        {essays.map((essay, i) => (
-          <li key={essay.slug}>
-            <EssayCard essay={essay} index={i} />
-          </li>
-        ))}
-      </ul>
+      {essays.length > 0 ? (
+        <ul className="mt-4 divide-y divide-line border-y border-line">
+          {essays.map((essay, i) => (
+            <li key={essay.slug}>
+              <EssayCard essay={essay} index={i} />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="mt-4 max-w-md text-ash-200">Longer-form writing is on its way.</p>
+      )}
     </section>
   );
 }

@@ -13,18 +13,23 @@ export function About() {
       <div className="mt-12 grid gap-12 md:grid-cols-12 md:gap-16">
         <div className="md:col-span-7">
           <p className="display text-display-md" data-reveal>
-            I&apos;m {site.firstName}. I build software, write about what I learn, and keep
-            everything I make <em>in one place</em>, which is this site.
+            I&apos;m {site.firstName}. I build software, do research where climate meets
+            computing, and keep everything I make <em>in one place</em>, which is this site.
           </p>
           <p className="mt-8 max-w-prose text-ash-200" data-reveal>
-            Replace this paragraph with two or three sentences about who you are, what you
-            care about, and what you&apos;re looking for. Keep it specific: the project
-            you&apos;re proudest of, the problem you can&apos;t stop thinking about, the kind
-            of team you want to join.
+            I study Computer Science and Philosophy at Brown. Before that I spent four years at
+            Phillips Academy Andover as a Caroline D. Bradley Scholar, co-leading the climate
+            lobby and tutoring AP math and physics.
           </p>
           <p className="mt-5 max-w-prose text-ash-200" data-reveal>
-            Outside of work: a hobby, a sport, a thing you collect. People remember the
-            human details.
+            Right now I&apos;m a founding engineer at Asteria Labs in San Francisco, building AI
+            video avatars and leading go-to-market. My research has ranged from decarbonization
+            pathways at the MIT Energy Initiative to neural networks for syllogistic reasoning at
+            Cambridge, with four papers and presentations along the way.
+          </p>
+          <p className="mt-5 max-w-prose text-ash-200" data-reveal>
+            Away from a keyboard: tournament chess as a USCF National Master, sprints and long
+            jump, piano, and beatboxing.
           </p>
           <div className="mt-10 flex flex-wrap gap-3" data-reveal>
             <Button href={site.resumePath} variant="solid" external data-magnetic>
@@ -38,7 +43,9 @@ export function About() {
         <dl className="grid content-start gap-6 border-t border-line pt-8 md:col-span-4 md:col-start-9 md:border-t-0 md:border-l md:pt-0 md:pl-10">
           <Fact term="Based in" detail={site.location} />
           <Fact term="Status" detail={site.availability} />
-          <Fact term="Focus" detail="Full-stack web, tooling, writing" />
+          <Fact term="Studying" detail="Computer Science & Philosophy, Brown '30" />
+          <Fact term="Focus" detail="Full-stack web, AI agents, climate and energy research" />
+          <Fact term="Chess" detail="USCF National Master · 2230 USCF · 2050 FIDE" />
           <Fact
             term="Elsewhere"
             detail={

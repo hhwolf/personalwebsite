@@ -20,8 +20,8 @@ const physicsAllowedOnServer = () => false;
 
 const pillTone: Record<SkillCategory, string> = {
   Languages: "border-ember text-ember shadow-[0_0_24px_-6px_rgb(242_163_58/0.7)]",
-  Frontend: "border-bone/70 text-bone",
-  Backend: "border-ash-200/50 text-ash-200",
+  Web: "border-bone/70 text-bone",
+  "Data & ML": "border-ash-200/50 text-ash-200",
   Tools: "border-ash-600 text-ash-400",
 };
 
