@@ -102,3 +102,5 @@ Henry asked for three jcedrik details that the first pass left out.
 
 - Bought on GoDaddy. Added `henryrhe.com` and `www.henryrhe.com` to the Vercel project (Asteria team). `NEXT_PUBLIC_SITE_URL` and the `site.url` fallback now point at https://henryrhe.com.
 - DNS at GoDaddy must be changed by Henry: A `@` → 76.76.21.21 (replace the parking A records), CNAME `www` → cname.vercel-dns.com. Vercel issues the certificate automatically once DNS resolves.
+- 2026-10-06 later: GoDaddy DNS changed (A @ → 76.76.21.21, CNAME www → cname.vercel-dns.com). Vercel verified via A record. The automatic certificate did not appear after 5 minutes, so `vercel certs issue henryrhe.com www.henryrhe.com` was run and succeeded (Let's Encrypt, valid to 2027-01-04). Verified against the edge directly: apex 200, www 200, http → https 308.
+- Note: the local network this session ran on has a Fortinet DNS filter that intercepts the newly registered domain (resolves to a block page). All verification used DNS-over-HTTPS and `curl --resolve`. Henry may see the same block on that network until the filter's category for the domain updates.
