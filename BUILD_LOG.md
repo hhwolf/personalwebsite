@@ -90,3 +90,10 @@ Henry asked for three jcedrik details that the first pass left out.
 - All five Vercel deployments return 402 "Deployment Paused", so live captures were impossible. Cloned each repo to `/tmp/shots`, installed, ran the dev servers on :5101–:5107, and captured at 1600×1000 with Playwright (The Snap League needed `--use-angle=swiftshader` for WebGL). Where the repo ships better author screenshots (FitCheck `docs/demo/01-variant.png`, Mini Desktop `docs/hero.png`) those were used, downscaled to 1600 wide. Kindred's three phone screenshots from `docs/` were composed into one landscape image.
 - Seven projects now have images; FF Dash (needs ESPN credentials), fpl-predict (CLI), and the Kalshi analysis (no figures in repo) keep the numbered placeholder tile.
 - Résumé: the phone number and its separator were removed from the PDF content stream with pypdf (glyph-level edit, verified by text extraction), then streams recompressed. The original stays only in `.context/attachments/` (gitignored).
+
+## 2026-10-06 — Deployed to Vercel (Asteria team)
+
+- Henry asked to deploy to "the pro account". The CLI token could not query team plans, so the Asteria team (`asteria-79792469`, hosts app.asterialabs.ai) was taken as the Pro account; the "ast" team is the Hobby one with paused projects.
+- `vercel link --project personalwebsite` + `vercel deploy --prod`. Production alias: https://personalwebsite-flax-eta.vercel.app (the bare `personalwebsite.vercel.app` belongs to someone else).
+- `NEXT_PUBLIC_SITE_URL` set in Production and redeployed; canonical and sitemap verified. `site.url` fallback updated to the same alias.
+- Linking from this Conductor worktree created `.env.local` (gitignored) with a Vercel OIDC token.
