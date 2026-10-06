@@ -214,7 +214,7 @@ function PhysicsStage({ visible }: { visible: Skill[] }) {
           last = now;
           return;
         }
-        const dt = Math.min(now - last, 16.667);
+        const dt = Math.min(now - last, 1000 / 60);
         last = now;
         Engine.update(engine, dt);
         sync();
