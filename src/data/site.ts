@@ -24,7 +24,7 @@ export const site = {
   location: "Providence, RI",
   email: "henry_he@brown.edu",
   /** Production URL. Update when the custom domain is live. */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://personalwebsite-flax-eta.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://henryrhe.com",
   resumePath: "/resume.pdf",
   availability: "Open to opportunities",
   socials: [

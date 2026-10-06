@@ -97,3 +97,8 @@ Henry asked for three jcedrik details that the first pass left out.
 - `vercel link --project personalwebsite` + `vercel deploy --prod`. Production alias: https://personalwebsite-flax-eta.vercel.app (the bare `personalwebsite.vercel.app` belongs to someone else).
 - `NEXT_PUBLIC_SITE_URL` set in Production and redeployed; canonical and sitemap verified. `site.url` fallback updated to the same alias.
 - Linking from this Conductor worktree created `.env.local` (gitignored) with a Vercel OIDC token.
+
+## 2026-10-06 — Domain henryrhe.com
+
+- Bought on GoDaddy. Added `henryrhe.com` and `www.henryrhe.com` to the Vercel project (Asteria team). `NEXT_PUBLIC_SITE_URL` and the `site.url` fallback now point at https://henryrhe.com.
+- DNS at GoDaddy must be changed by Henry: A `@` → 76.76.21.21 (replace the parking A records), CNAME `www` → cname.vercel-dns.com. Vercel issues the certificate automatically once DNS resolves.
