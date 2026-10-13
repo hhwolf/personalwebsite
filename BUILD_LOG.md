@@ -111,3 +111,11 @@ Henry asked for three jcedrik details that the first pass left out.
 - About rewritten to Henry's wording; Andover line trimmed to the scholarship; Asteria framed as 2026 (timeline end date "2026"); Leo Celi sentence removed from the MIT entry.
 - Skills trimmed to 16 (removed FastAPI, React, Postgres, scikit-learn, Vite, Three.js, Docker, LightGBM, Next.js); "Web" category folded away, Supabase moved to Tools.
 - New section 06 "What I'm reading" (`src/data/reading.ts`, `Reading.tsx`): seven books as spines on a shelf. Contact becomes 07. Author attributions were added from the titles; "The Meaning of Your Life" left without an author since the title is ambiguous.
+
+## 2026-10-13 — Hero title case + last three screenshots
+
+- Hero tagline lines title-cased per Henry ("CS & Philosophy At Brown. / Founding Engineer, Climate Researcher, Chess National Master.").
+- FF Dash: ran locally against a public ESPN league found by probing IDs (80001, "SMASHMOUTH FOOTBALL") with a throwaway password; captured the Lineup optimizer page because the Dashboard/Matchup pages show other people's team names and an email. Next dev badge hidden via CSS.
+- fpl-predict: the repo's static `dashboard/index.html` served with `python -m http.server`, captured in dark scheme.
+- Kalshi: the notebook has no figures; its markdown and pandas tables were rendered into a dark styled HTML page and the Revision 7 tracking table captured.
+- All ten projects now have images. Temporary servers on :5108/:5109 stopped; clones remain in /tmp/shots.

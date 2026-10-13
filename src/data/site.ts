@@ -17,8 +17,8 @@ export const site = {
   name: "Henry He",
   firstName: "Henry",
   /** Lines under the name in the hero; joined with a space for metadata. */
-  taglineLines: ["CS & Philosophy at Brown.", "Founding engineer, climate researcher, chess National Master."],
-  tagline: "CS & Philosophy at Brown. Founding engineer, climate researcher, chess National Master.",
+  taglineLines: ["CS & Philosophy At Brown.", "Founding Engineer, Climate Researcher, Chess National Master."],
+  tagline: "CS & Philosophy At Brown. Founding Engineer, Climate Researcher, Chess National Master.",
   /** One-paragraph summary used in metadata and social previews. */
   description:
     "Henry He studies Computer Science and Philosophy at Brown University. Founding engineer at Asteria Labs, research assistant across MIT, Cambridge, and Northeastern, and a USCF National Master. Projects, papers, and essays in one place.",

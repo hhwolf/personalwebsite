@@ -1,5 +1,8 @@
 import type { StaticImageData } from "next/image";
 import declutteredShot from "@/assets/projects/decluttered.png";
+import ffDashShot from "@/assets/projects/ff-dash.png";
+import fplPredictShot from "@/assets/projects/fpl-predict.png";
+import kalshiShot from "@/assets/projects/kalshi-nba-pricing.png";
 import fitcheckShot from "@/assets/projects/fitcheck.png";
 import greensiteShot from "@/assets/projects/greensite.png";
 import kindredShot from "@/assets/projects/kindred.png";
@@ -77,6 +80,7 @@ export const projects: Project[] = [
   {
     title: "FF Dash",
     slug: "ff-dash",
+    image: ffDashShot,
     category: "Data product · Sports",
     description:
       "A personal ESPN fantasy football dashboard and predictor. Blends projections from ESPN, Sleeper, and a rules-based model into a consensus that powers a lineup optimizer, matchup preview, waiver finder, and trade analyzer.",
@@ -90,6 +94,7 @@ export const projects: Project[] = [
   {
     title: "fpl-predict",
     slug: "fpl-predict",
+    image: fplPredictShot,
     category: "Machine learning · Python",
     description:
       "Predicts a Fantasy Premier League player's points for the next gameweek. Live scrape of the FPL API, Understat, and historical archives, joined into leak-safe features for a gradient-boosted model with time-based validation against baselines.",
@@ -157,6 +162,7 @@ export const projects: Project[] = [
   {
     title: "Kalshi vs. Sportsbook NBA Pricing",
     slug: "kalshi-nba-pricing",
+    image: kalshiShot,
     category: "Research · Statistics",
     description:
       "A Python data pipeline and statistical analysis comparing NBA game pricing on Kalshi, a regulated prediction market, with aggregated sportsbook odds. Final artifact for CSC600 at Phillips Academy Andover, with Justin Puno.",
