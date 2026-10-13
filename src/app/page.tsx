@@ -5,6 +5,7 @@ import { Hero } from "@/components/sections/Hero";
 import { HomeMotion } from "@/components/sections/HomeMotion";
 import { Journey } from "@/components/sections/Journey";
 import { Projects } from "@/components/sections/Projects";
+import { Reading } from "@/components/sections/Reading";
 import { Skills } from "@/components/sections/Skills";
 
 export default function HomePage() {
@@ -17,6 +18,7 @@ export default function HomePage() {
       <Projects />
       <EssaysPreview />
       <Skills />
+      <Reading />
       <HomeMotion />
     </>
   );

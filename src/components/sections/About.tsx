@@ -13,16 +13,16 @@ export function About() {
       <div className="mt-12 grid gap-12 md:grid-cols-12 md:gap-16">
         <div className="md:col-span-7">
           <p className="display text-display-md" data-reveal>
-            I&apos;m {site.firstName}. I build software, do research where climate meets
-            computing, and keep everything I make <em>in one place</em>, which is this site.
+            Hey there, I&apos;m Henry! I&apos;m passionate about using tech for societal impact,
+            climate change, strategy games, and philosophy. Take a look around at what
+            I&apos;ve done and what I&apos;m <em>working on!</em>
           </p>
           <p className="mt-8 max-w-prose text-ash-200" data-reveal>
             I study Computer Science and Philosophy at Brown. Before that I spent four years at
-            Phillips Academy Andover as a Caroline D. Bradley Scholar, co-leading the climate
-            lobby and tutoring AP math and physics.
+            Phillips Academy Andover as a Caroline D. Bradley Scholar.
           </p>
           <p className="mt-5 max-w-prose text-ash-200" data-reveal>
-            Right now I&apos;m a founding engineer at Asteria Labs in San Francisco, building AI
+            In 2026 I was a founding engineer at Asteria Labs in San Francisco, building AI
             video avatars and leading go-to-market. My research has ranged from decarbonization
             pathways at the MIT Energy Initiative to neural networks for syllogistic reasoning at
             Cambridge, with four papers and presentations along the way.

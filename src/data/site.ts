@@ -16,8 +16,9 @@ export type NavSection = {
 export const site = {
   name: "Henry He",
   firstName: "Henry",
-  /** Short line under the name in the hero. */
-  tagline: "CS & Philosophy at Brown. Founding engineer, climate researcher, chess master.",
+  /** Lines under the name in the hero; joined with a space for metadata. */
+  taglineLines: ["CS & Philosophy at Brown.", "Founding engineer, climate researcher, chess National Master."],
+  tagline: "CS & Philosophy at Brown. Founding engineer, climate researcher, chess National Master.",
   /** One-paragraph summary used in metadata and social previews. */
   description:
     "Henry He studies Computer Science and Philosophy at Brown University. Founding engineer at Asteria Labs, research assistant across MIT, Cambridge, and Northeastern, and a USCF National Master. Projects, papers, and essays in one place.",
@@ -37,6 +38,7 @@ export const site = {
     { id: "projects", number: "03", label: "Projects" },
     { id: "essays", number: "04", label: "Writing" },
     { id: "skills", number: "05", label: "Skills" },
-    { id: "contact", number: "06", label: "Contact" },
+    { id: "reading", number: "06", label: "Reading" },
+    { id: "contact", number: "07", label: "Contact" },
   ] satisfies NavSection[],
 } as const;

@@ -13,7 +13,7 @@ export function Footer() {
     >
       <div className="mx-auto w-full max-w-6xl px-6 pt-24 pb-10 md:pt-32">
         <p className="label flex items-center gap-3" data-reveal>
-          <span className="text-ember">06</span>
+          <span className="text-ember">07</span>
           <span aria-hidden className="h-px w-10 bg-ember/60" />
           <span>Contact</span>
           <span aria-hidden className="ml-4 inline-block size-1.5 rounded-full bg-ember" />

@@ -94,7 +94,11 @@ export function Hero() {
           </span>
         </h1>
         <p className="mt-8 max-w-xl text-lg text-ash-200 md:text-xl" data-hero>
-          {site.tagline}
+          {site.taglineLines.map((line) => (
+            <span key={line} className="block">
+              {line}
+            </span>
+          ))}
         </p>
       </div>
 

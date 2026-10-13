@@ -104,3 +104,10 @@ Henry asked for three jcedrik details that the first pass left out.
 - DNS at GoDaddy must be changed by Henry: A `@` → 76.76.21.21 (replace the parking A records), CNAME `www` → cname.vercel-dns.com. Vercel issues the certificate automatically once DNS resolves.
 - 2026-10-06 later: GoDaddy DNS changed (A @ → 76.76.21.21, CNAME www → cname.vercel-dns.com). Vercel verified via A record. The automatic certificate did not appear after 5 minutes, so `vercel certs issue henryrhe.com www.henryrhe.com` was run and succeeded (Let's Encrypt, valid to 2027-01-04). Verified against the edge directly: apex 200, www 200, http → https 308.
 - Note: the local network this session ran on has a Fortinet DNS filter that intercepts the newly registered domain (resolves to a block page). All verification used DNS-over-HTTPS and `curl --resolve`. Henry may see the same block on that network until the filter's category for the domain updates.
+
+## 2026-10-13 — Copy edits and Reading section
+
+- Hero tagline split onto two lines; "chess master" → "chess National Master".
+- About rewritten to Henry's wording; Andover line trimmed to the scholarship; Asteria framed as 2026 (timeline end date "2026"); Leo Celi sentence removed from the MIT entry.
+- Skills trimmed to 16 (removed FastAPI, React, Postgres, scikit-learn, Vite, Three.js, Docker, LightGBM, Next.js); "Web" category folded away, Supabase moved to Tools.
+- New section 06 "What I'm reading" (`src/data/reading.ts`, `Reading.tsx`): seven books as spines on a shelf. Contact becomes 07. Author attributions were added from the titles; "The Meaning of Your Life" left without an author since the title is ambiguous.

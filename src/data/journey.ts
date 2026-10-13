@@ -24,7 +24,7 @@ export const journey: TimelineEntry[] = [
     org: "Asteria Labs · San Francisco, CA",
     role: "Founding Engineer",
     start: "Jul 2026",
-    end: "Present",
+    end: "2026",
     summary:
       "Built video avatars trained as AI staffers for the product site, led go-to-market and direct customer outreach, and shaped the roadmap with cartoon avatars, cross-site product comparison, and computer use for agents.",
   },
@@ -44,7 +44,7 @@ export const journey: TimelineEntry[] = [
     start: "Jul 2025",
     end: "May 2026",
     summary:
-      "Modeled US light-duty vehicle market and emissions pathways to net zero under Director Randall Field. Ran a scientometric analysis of AHA medical papers with Professor Leo Celi.",
+      "Modeled US light-duty vehicle market and emissions pathways to net zero under Director Randall Field; paper in preparation.",
   },
   {
     type: "experience",
