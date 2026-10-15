@@ -17,7 +17,7 @@ Everything you will touch regularly lives in five places. No component changes n
 
 | What | Where |
 | --- | --- |
-| Name, tagline, location, email, socials, résumé path, production URL | `src/data/site.ts` |
+| Name, tagline, location, email, socials, production URL | `src/data/site.ts` |
 | Projects (title, description, tags, year, GitHub + live links, screenshot) | `src/data/projects.ts` |
 | Journey timeline (education + experience) | `src/data/journey.ts` |
 | Skills and categories | `src/data/skills.ts` |
@@ -51,10 +51,6 @@ Body in Markdown. Code blocks get syntax highlighting; add `title="file.ts"` or 
 ```
 
 The slug is the filename. Set `draft: true` in the frontmatter to hide an essay from the index and sitemap while you work on it. The build fails loudly if `title`, `date`, `summary`, or `tags` are missing.
-
-### Résumé
-
-Replace `public/resume.pdf`. The link text and path come from `site.resumePath`.
 
 ## Deploy
 

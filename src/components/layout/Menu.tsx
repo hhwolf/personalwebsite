@@ -180,11 +180,6 @@ export function Menu() {
                         </a>
                       </li>
                     ))}
-                    <li>
-                      <a href={site.resumePath} className="transition-colors hover:text-ember">
-                        Résumé <span aria-hidden>↗</span>
-                      </a>
-                    </li>
                   </ul>
                 </div>
                 <p className="label text-ash-400">

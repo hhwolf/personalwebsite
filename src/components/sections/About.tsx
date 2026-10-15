@@ -15,27 +15,24 @@ export function About() {
           <p className="display text-display-md" data-reveal>
             Hey there, I&apos;m Henry! I&apos;m passionate about using tech for societal impact,
             climate change, strategy games, and philosophy. Take a look around at what
-            I&apos;ve done and what I&apos;m <em>working on!</em>
+            I&apos;ve done and what I&apos;m working on!
           </p>
           <p className="mt-8 max-w-prose text-ash-200" data-reveal>
             I study Computer Science and Philosophy at Brown. Before that I spent four years at
             Phillips Academy Andover as a Caroline D. Bradley Scholar.
           </p>
           <p className="mt-5 max-w-prose text-ash-200" data-reveal>
-            In 2026 I was a founding engineer at Asteria Labs in San Francisco, building AI
+            In 2026, I was a founding engineer at Asteria Labs in San Francisco, building AI
             video avatars and leading go-to-market. My research has ranged from decarbonization
             pathways at the MIT Energy Initiative to neural networks for syllogistic reasoning at
             Cambridge, with four papers and presentations along the way.
           </p>
           <p className="mt-5 max-w-prose text-ash-200" data-reveal>
-            Away from a keyboard: tournament chess as a USCF National Master, sprints and long
-            jump, piano, and beatboxing.
+            Outside of school and work, I play tournament chess as a USCF National Master, run
+            sprints and long jump, play piano, and beatbox.
           </p>
           <div className="mt-10 flex flex-wrap gap-3" data-reveal>
-            <Button href={site.resumePath} variant="solid" external data-magnetic>
-              Download résumé <Arrow external />
-            </Button>
-            <Button href={`mailto:${site.email}`} variant="outline" data-magnetic>
+            <Button href={`mailto:${site.email}`} variant="solid" data-magnetic>
               Say hello <Arrow />
             </Button>
           </div>

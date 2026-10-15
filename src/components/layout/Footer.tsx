@@ -27,9 +27,6 @@ export function Footer() {
           <Button href={`mailto:${site.email}`} variant="solid" data-magnetic>
             {site.email} <Arrow />
           </Button>
-          <Button href={site.resumePath} variant="outline" external data-magnetic>
-            Résumé <Arrow external />
-          </Button>
         </div>
 
         <div className="mt-24 grid gap-10 border-t border-line pt-8 md:grid-cols-3">

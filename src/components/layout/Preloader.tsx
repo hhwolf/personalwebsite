@@ -90,7 +90,7 @@ export function Preloader() {
       <div className="relative mx-auto w-full max-w-5xl">
         <p
           data-pre-sign
-          className="font-signature signature-reveal text-center text-[clamp(4rem,15vw,14rem)] leading-[1.1] text-bone"
+          className="display signature-reveal text-center text-[clamp(3.5rem,13vw,12rem)] leading-[1.05] tracking-[-0.02em] text-bone italic"
         >
           {site.name}
         </p>

@@ -17,8 +17,8 @@ export const site = {
   name: "Henry He",
   firstName: "Henry",
   /** Lines under the name in the hero; joined with a space for metadata. */
-  taglineLines: ["CS & Philosophy At Brown.", "Founding Engineer, Climate Researcher, Chess National Master."],
-  tagline: "CS & Philosophy At Brown. Founding Engineer, Climate Researcher, Chess National Master.",
+  taglineLines: ["CS & Philosophy at Brown.", "Founding Engineer, Climate Researcher, Chess National Master."],
+  tagline: "CS & Philosophy at Brown. Founding Engineer, Climate Researcher, Chess National Master.",
   /** One-paragraph summary used in metadata and social previews. */
   description:
     "Henry He studies Computer Science and Philosophy at Brown University. Founding engineer at Asteria Labs, research assistant across MIT, Cambridge, and Northeastern, and a USCF National Master. Projects, papers, and essays in one place.",
@@ -26,7 +26,6 @@ export const site = {
   email: "henry_he@brown.edu",
   /** Production URL. Update when the custom domain is live. */
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://henryrhe.com",
-  resumePath: "/resume.pdf",
   availability: "Open to opportunities",
   socials: [
     { label: "GitHub", href: "https://github.com/hhwolf" },

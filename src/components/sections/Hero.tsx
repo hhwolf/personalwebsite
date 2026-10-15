@@ -74,7 +74,7 @@ export function Hero() {
           <span className="mt-1 block text-ember">{site.availability}</span>
         </p>
         <p
-          className="font-signature absolute top-6 left-1/2 hidden -translate-x-1/2 text-4xl text-ash-400 md:block"
+          className="display absolute top-7 left-1/2 hidden -translate-x-1/2 text-3xl tracking-[0.08em] text-ash-400 italic md:block"
           aria-hidden
           data-hero
         >

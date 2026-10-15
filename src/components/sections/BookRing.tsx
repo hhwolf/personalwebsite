@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import type { Book } from "@/data/reading";
 import { prefersReducedMotion } from "@/lib/gsap";
@@ -133,21 +134,34 @@ export function BookRing({ books }: { books: Book[] }) {
               <div
                 onPointerEnter={() => setHovered(i)}
                 onPointerLeave={() => setHovered(null)}
-                className={`relative h-full w-full rounded-r-xl rounded-l-md border border-line bg-gradient-to-br p-5 shadow-[inset_8px_0_14px_-10px_rgb(0_0_0/0.9),0_30px_60px_-20px_rgb(0_0_0/0.8)] transition-transform duration-500 ease-out-expo [backface-visibility:hidden] ${tones[i % tones.length]} ${
-                  isHover ? "scale-[1.18] -translate-y-4" : ""
-                }`}
+                className={`relative h-full w-full overflow-hidden rounded-r-xl rounded-l-md border border-line shadow-[0_30px_60px_-20px_rgb(0_0_0/0.8)] transition-transform duration-500 ease-out-expo [backface-visibility:hidden] ${
+                  book.cover ? "bg-ink-raised" : `bg-gradient-to-br p-5 ${tones[i % tones.length]}`
+                } ${isHover ? "scale-[1.18] -translate-y-4" : ""}`}
               >
-                <span aria-hidden className="absolute inset-y-0 left-2 w-px bg-ink/25" />
+                {book.cover ? (
+                  <Image
+                    src={book.cover}
+                    alt={`${book.title} cover`}
+                    fill
+                    sizes="200px"
+                    className="object-cover"
+                    draggable={false}
+                  />
+                ) : (
+                  <>
+                    <p className="display text-[1.35rem] leading-tight md:text-[1.5rem]">{book.title}</p>
+                    {book.author && (
+                      <p className="absolute right-5 bottom-5 left-5 font-mono text-[0.62rem] tracking-[0.14em] uppercase opacity-80">
+                        {book.author}
+                      </p>
+                    )}
+                  </>
+                )}
+                <span aria-hidden className="pointer-events-none absolute inset-y-0 left-0 w-3 bg-gradient-to-r from-black/50 to-transparent" />
                 <span
                   aria-hidden
-                  className="absolute inset-0 rounded-r-xl rounded-l-md bg-[linear-gradient(105deg,transparent_40%,rgb(255_255_255/0.08)_45%,transparent_55%)]"
+                  className="pointer-events-none absolute inset-0 bg-[linear-gradient(105deg,transparent_40%,rgb(255_255_255/0.10)_45%,transparent_55%)]"
                 />
-                <p className="display text-[1.35rem] leading-tight md:text-[1.5rem]">{book.title}</p>
-                {book.author && (
-                  <p className="absolute right-5 bottom-5 left-5 font-mono text-[0.62rem] tracking-[0.14em] uppercase opacity-80">
-                    {book.author}
-                  </p>
-                )}
               </div>
             </div>
           );

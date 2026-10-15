@@ -124,3 +124,9 @@ Henry asked for three jcedrik details that the first pass left out.
 
 - Reading section is now a 3D ring (`BookRing.tsx`): books on `rotateY(i·360/n) translateZ(r)`, ring idles at ~3.6°/s, pointer drag spins it with momentum (works on touch via pointer events, `touch-pan-y` keeps vertical scrolling), hover pauses the ring and scales the book 1.18×. Radius adapts to container width. Reduced motion disables the idle spin only. Custom cursor shows "SPIN" over the stage.
 - Verified: drag changed ring angle by ~300°, hover scale applied, no horizontal overflow on iPhone 13, no page errors.
+
+## 2026-10-15 — Real covers, résumé removed, reviewer feedback
+
+- Covers fetched from Open Library (six of seven; "The Meaning of Your Life" is ambiguous and keeps the typographic card). Three-Body and Illusion of Choice needed ISBN lookups; title search returned the wrong edition or nothing.
+- Résumé removed from the site entirely (file, buttons in About/Footer/Menu, README). Henry's concern is doxxing. The PDF is still in git history of the public repo (commit 1701ac6 has the version with the phone number); flagged for a history purge.
+- Feedback from Henry's friend: script font replaced with Instrument Serif italic for the preloader and monogram; "working on!" no longer ember; "at Brown" lowercase; comma after "In 2026"; hobbies sentence rewritten.
