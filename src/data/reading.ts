@@ -2,6 +2,7 @@ import type { StaticImageData } from "next/image";
 import carelessPeople from "@/assets/books/careless-people.jpg";
 import cryingInHMart from "@/assets/books/crying-in-h-mart.jpg";
 import illusionOfChoice from "@/assets/books/illusion-of-choice.jpg";
+import meaningOfYourLife from "@/assets/books/meaning-of-your-life.jpg";
 import psychologyOfMoney from "@/assets/books/psychology-of-money.jpg";
 import threeBodyProblem from "@/assets/books/three-body-problem.jpg";
 import untetheredSoul from "@/assets/books/untethered-soul.jpg";
@@ -21,5 +22,5 @@ export const reading: Book[] = [
   { title: "Crying in H Mart", author: "Michelle Zauner", cover: cryingInHMart },
   { title: "The Psychology of Money", author: "Morgan Housel", cover: psychologyOfMoney },
   { title: "Careless People", author: "Sarah Wynn-Williams", cover: carelessPeople },
-  { title: "The Meaning of Your Life", author: "Arthur C. Brooks" },
+  { title: "The Meaning of Your Life", author: "Arthur C. Brooks", cover: meaningOfYourLife },
 ];

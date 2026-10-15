@@ -41,7 +41,7 @@ export function About() {
           <Fact term="Based in" detail={site.location} />
           <Fact term="Status" detail={site.availability} />
           <Fact term="Studying" detail="Computer Science & Philosophy, Brown '30" />
-          <Fact term="Focus" detail="Full-stack web, AI agents, climate and energy research" />
+          <Fact term="Focus" detail="Physical intelligence, AI safety, climate and energy research" />
           <Fact term="Chess" detail="USCF National Master · 2230 USCF · 2050 FIDE" />
           <Fact
             term="Elsewhere"
