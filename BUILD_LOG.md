@@ -119,3 +119,8 @@ Henry asked for three jcedrik details that the first pass left out.
 - fpl-predict: the repo's static `dashboard/index.html` served with `python -m http.server`, captured in dark scheme.
 - Kalshi: the notebook has no figures; its markdown and pandas tables were rendered into a dark styled HTML page and the Revision 7 tracking table captured.
 - All ten projects now have images. Temporary servers on :5108/:5109 stopped; clones remain in /tmp/shots.
+
+## 2026-10-15 — Book ring
+
+- Reading section is now a 3D ring (`BookRing.tsx`): books on `rotateY(i·360/n) translateZ(r)`, ring idles at ~3.6°/s, pointer drag spins it with momentum (works on touch via pointer events, `touch-pan-y` keeps vertical scrolling), hover pauses the ring and scales the book 1.18×. Radius adapts to container width. Reduced motion disables the idle spin only. Custom cursor shows "SPIN" over the stage.
+- Verified: drag changed ring angle by ~300°, hover scale applied, no horizontal overflow on iPhone 13, no page errors.
