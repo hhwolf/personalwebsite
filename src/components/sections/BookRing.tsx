@@ -134,7 +134,7 @@ export function BookRing({ books }: { books: Book[] }) {
               <div
                 onPointerEnter={() => setHovered(i)}
                 onPointerLeave={() => setHovered(null)}
-                className={`relative h-full w-full overflow-hidden rounded-r-xl rounded-l-md border border-line shadow-[0_30px_60px_-20px_rgb(0_0_0/0.8)] transition-transform duration-500 ease-out-expo [backface-visibility:hidden] ${
+                className={`book-card relative h-full w-full rounded-r-xl rounded-l-md border border-line shadow-[0_30px_60px_-20px_rgb(0_0_0/0.8)] transition-transform duration-500 ease-out-expo ${
                   book.cover ? "bg-ink-raised" : `bg-gradient-to-br p-5 ${tones[i % tones.length]}`
                 } ${isHover ? "scale-[1.18] -translate-y-4" : ""}`}
               >
@@ -142,10 +142,12 @@ export function BookRing({ books }: { books: Book[] }) {
                   <Image
                     src={book.cover}
                     alt={`${book.title} cover`}
-                    fill
+                    width={200}
+                    height={300}
                     sizes="200px"
-                    className="object-cover"
+                    loading="eager"
                     draggable={false}
+                    className="book-cover h-full w-full rounded-r-xl rounded-l-md object-cover"
                   />
                 ) : (
                   <>
@@ -157,10 +159,10 @@ export function BookRing({ books }: { books: Book[] }) {
                     )}
                   </>
                 )}
-                <span aria-hidden className="pointer-events-none absolute inset-y-0 left-0 w-3 bg-gradient-to-r from-black/50 to-transparent" />
+                <span aria-hidden className="pointer-events-none absolute inset-y-0 left-0 w-3 rounded-l-md bg-gradient-to-r from-black/50 to-transparent" />
                 <span
                   aria-hidden
-                  className="pointer-events-none absolute inset-0 bg-[linear-gradient(105deg,transparent_40%,rgb(255_255_255/0.10)_45%,transparent_55%)]"
+                  className="pointer-events-none absolute inset-0 rounded-r-xl rounded-l-md bg-[linear-gradient(105deg,transparent_40%,rgb(255_255_255/0.10)_45%,transparent_55%)]"
                 />
               </div>
             </div>

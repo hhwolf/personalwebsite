@@ -15,7 +15,7 @@ export function About() {
           <p className="display text-display-md" data-reveal>
             Hey there, I&apos;m Henry! I&apos;m passionate about using tech for societal impact,
             climate change, strategy games, and philosophy. Take a look around at what
-            I&apos;ve done and what I&apos;m working on!
+            I&apos;ve done and what I&apos;m <em>working on</em>
           </p>
           <p className="mt-8 max-w-prose text-ash-200" data-reveal>
             I study Computer Science and Philosophy at Brown. Before that I spent four years at

@@ -21,5 +21,5 @@ export const reading: Book[] = [
   { title: "Crying in H Mart", author: "Michelle Zauner", cover: cryingInHMart },
   { title: "The Psychology of Money", author: "Morgan Housel", cover: psychologyOfMoney },
   { title: "Careless People", author: "Sarah Wynn-Williams", cover: carelessPeople },
-  { title: "The Meaning of Your Life" },
+  { title: "The Meaning of Your Life", author: "Arthur C. Brooks" },
 ];

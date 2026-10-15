@@ -352,3 +352,15 @@ html.has-cursor * {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
+
+/*
+ * Book ring (Safari): backface-visibility must sit on the leaf elements, and
+ * overflow:hidden inside a preserve-3d tree makes WebKit drop the children.
+ * So the card is not clipped; the cover image carries its own rounding.
+ */
+.book-card,
+.book-card > * {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
