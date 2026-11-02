@@ -38,7 +38,7 @@ export const projects: Project[] = [
     image: fitcheckShot,
     category: "Hackathon winner · Full-stack",
     description:
-      "Winner of Columbia DivHacks 2026 (Live Better track). Scan a small NYC room once, text furniture ideas over iMessage, and rearrange your real room like a top-down game before you buy or haul anything up three flights of stairs.",
+      "Winner of Columbia DivHacks 2026 (Gemini track). Scan a small NYC room once, text furniture ideas over iMessage, and rearrange your real room like a top-down game before you buy or haul anything up three flights of stairs.",
     challenge:
       "Making the whole stack demoable offline: the FastAPI backend and Vite editor run in a mock mode with zero env vars, then switch to Supabase and the iMessage relay when real keys are present.",
     tags: ["Python", "FastAPI", "TypeScript", "Vite", "Supabase", "Swift"],
