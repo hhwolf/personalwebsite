@@ -24,7 +24,7 @@ export const journey: TimelineEntry[] = [
     org: "Asteria Labs · San Francisco, CA",
     role: "Founding Engineer",
     start: "Jul 2026",
-    end: "2026",
+    end: "Oct 2026",
     summary:
       "Built video avatars trained as AI staffers for the product site, led go-to-market and direct customer outreach, and shaped the roadmap with cartoon avatars, cross-site product comparison, and computer use for agents.",
   },
